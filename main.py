@@ -22,6 +22,10 @@ sprites.on_overlap(SpriteKind.player, SpriteKind.food, on_overlap)
 enemy = sprites.create(assets.image("""enemy"""), SpriteKind.player)
 def on_overlap2(sprite, otherSprite):
     pass
-sprites.on_overlap(SpriteKind.player, SpriteKind.player, on_overlap2)
+sprites.on_overlap(SpriteKind.enemy, SpriteKind.player, on_overlap2)
 enemy.set_position(randint(0,160), randint(0,120))
 enemy.follow(my_sprite)
+
+info.change_life_by(-1)
+enemy.set_position(randint(0,160), randint(0,120))
+my_sprite.set_position(randint(0,160), randint(0,120))

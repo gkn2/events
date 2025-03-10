@@ -14,8 +14,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_overlap(sprite
     otherSprite.setPosition(randint(0, 160), randint(0, 120))
 })
 let enemy = sprites.create(assets.image`enemy`, SpriteKind.Player)
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function on_overlap2(sprite: Sprite, otherSprite: Sprite) {
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function on_overlap2(sprite: Sprite, otherSprite: Sprite) {
     
 })
 enemy.setPosition(randint(0, 160), randint(0, 120))
 enemy.follow(my_sprite)
+info.changeLifeBy(-1)
+enemy.setPosition(randint(0, 160), randint(0, 120))
+my_sprite.setPosition(randint(0, 160), randint(0, 120))
