@@ -1,3 +1,10 @@
+@namespace
+class SpriteKind:
+    z = SpriteKind.create()
+    skeleton = SpriteKind.create()
+
+
+
 def say_something(sprite: Sprite): 
 
     sprite.say_text("Hello") 
@@ -29,3 +36,11 @@ def on_overlap2(da_enemy, da_player):
     da_enemy.set_position(randint(0,160), randint(0,120))
     da_player.set_position(randint(0,160), randint(0,120))
 sprites.on_overlap(SpriteKind.enemy, SpriteKind.player, on_overlap2)
+
+spr = sprites.create(assets.image("""plate"""), SpriteKind.z)
+spr.set_position(randint(0,160), randint(0,120))
+
+def on_overlap3(sprite, otherSprite):
+    info.change_life_by(1)
+    sprites.destroy(otherSprite)
+sprites.on_overlap(SpriteKind.player, SpriteKind.z, on_overlap3)

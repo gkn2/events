@@ -1,3 +1,8 @@
+namespace SpriteKind {
+    export const z = SpriteKind.create()
+    export const skeleton = SpriteKind.create()
+}
+
 function say_something(sprite: Sprite) {
     sprite.sayText("Hello")
 }
@@ -20,4 +25,10 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function on_overlap2(da_e
     info.changeLifeBy(-1)
     da_enemy.setPosition(randint(0, 160), randint(0, 120))
     da_player.setPosition(randint(0, 160), randint(0, 120))
+})
+let spr = sprites.create(assets.image`plate`, SpriteKind.z)
+spr.setPosition(randint(0, 160), randint(0, 120))
+sprites.onOverlap(SpriteKind.Player, SpriteKind.z, function on_overlap3(sprite: Sprite, otherSprite: Sprite) {
+    info.changeLifeBy(1)
+    sprites.destroy(otherSprite)
 })
