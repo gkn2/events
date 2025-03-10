@@ -13,12 +13,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function on_overlap(sprite
     info.changeScoreBy(1)
     otherSprite.setPosition(randint(0, 160), randint(0, 120))
 })
-let enemy = sprites.create(assets.image`enemy`, SpriteKind.Player)
-sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function on_overlap2(sprite: Sprite, otherSprite: Sprite) {
-    
+let enemy = sprites.create(assets.image`enemy`, SpriteKind.Enemy)
+enemy.setPosition(randint(0, 160), randint(0, 120))
+enemy.follow(my_sprite, 50)
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function on_overlap2(da_enemy: Sprite, da_player: Sprite) {
+    info.changeLifeBy(-1)
+    da_enemy.setPosition(randint(0, 160), randint(0, 120))
+    da_player.setPosition(randint(0, 160), randint(0, 120))
 })
-enemy.setPosition(randint(0, 160), randint(0, 120))
-enemy.follow(my_sprite)
-info.changeLifeBy(-1)
-enemy.setPosition(randint(0, 160), randint(0, 120))
-my_sprite.setPosition(randint(0, 160), randint(0, 120))
