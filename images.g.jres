@@ -19,6 +19,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "plate"
     },
+    "image5": {
+        "data": "hwQYABgAAAAAAAAA//D/AAAAAAAAAP//n98iDwAAAAAA8P/5md8i8wAAAAAA/5/4b98i8wAAAAAA/4n/G98i/w8AAADwj4mf//3/9g8AAADwiImf1m2I9QAAAADwiImf1m2I9QAAAADwj4mf/22I9g8AAAAA/4n/G52I9g8AAAAA/5/4b5n/DwAAAAAA8J/5mfnWBgAAAAAAAP//nw9pBgAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "h2"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
